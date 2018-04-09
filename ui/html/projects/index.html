@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Corner</title>
+    <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500" rel="stylesheet">
+    <link rel="stylesheet" href="src/style.css">
+    <link rel="stylesheet" href="src/projectblocks.css">
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+    <script src="src/projectscript.js"></script>
+    
+</head>
+<body>
+    <div id="nav">
+        <div>
+                <div id="editButton" editing="false" onclick="toggleEditing()">EDIT PROJECT</div>
+            <a href="/"><div> Student Corner</div></a>
+            <a href="/projects/"><div>Projects</div></a>
+            <a href="/students/"><div>Students</div></a>
+            <a href="/login/"><div>Login</div></a>
+        </div>
+    </div>
+    <div class="wrapper">
+
+
+        <div id="overview">
+            <div id="photo" style="background-image:url(src/placeholder.svg)"></div>
+            <div id="desc">
+                <h1 id="titleOutlet">Autonomous Drone Mapping</h1>
+                <p id="taglineOutlet">We built a drone from the ground up that will automatically analyze terrain and create a three-dimensional map of a desginated area. We are using this to improve farm efficieny and scout locations for new farms.</p>
+                <p id="authorOutlet">Created by <a href="">Margret Smith</a>, <a href="">Alex Thomas</a></p>
+            </div>
+        </div>
+
+        <div id="project">
+
+            <div id="pages">
+                <div id="pageOutlet">
+                    <div selected="true">Abstract</div>
+                    <div selected="false">Research</div>
+                    <div selected="false">Videos</div>
+                </div>
+            </div>
+            <div id="content">
+            
+                <div class="block title">Abstract</div>
+                <div class="block paragraph">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quibusdam et numquam optio repellendus, eum suscipit odio nemo sed id consectetur sit accusamus veritatis, facere aut voluptatum possimus quo modi vel! Lorem ipsum dolor sit amet consectetur adipisicing elit. Recusandae odio nulla modi ea nihil reprehenderit alias magnam, esse hic placeat natus veniam? Totam at architecto dolor nam ipsum unde dolore!</div>
+                <div class="block image" style="background-image: url(https://i.ytimg.com/vi/1PuuJX1-r4E/maxresdefault.jpg)"></div>
+                <div class="block paragraph">This project was originally created by Robert Paintsay. We decided to continue his work because it was very interesting. Lorem ipsum dolor sit amet consectetur adipisicing elit. Explicabo, veniam. Beatae sunt quidem culpa ut dicta accusantium minima hic nesciunt et magni deserunt amet, facere, quibusdam, perspiciatis modi aliquam voluptates!</div>
+                <div class="block title">Why We Needed a Custom Drone</div>
+                <div class="block image" style="background-image: url(https://hips.hearstapps.com/pop.h-cdn.co/assets/17/09/768x384/landscape-1488566247-landscape-1474991133-mavic-3.jpg)"></div>
+                <div class="block paragraph">Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta dolores ex quia nostrum praesentium corrupti repellendus, temporibus optio, ullam magnam molestiae aut consectetur, vero consequatur. Magnam sapiente sint ipsam totam. Lorem ipsum dolor sit amet consectetur adipisicing elit. Quae illo sequi unde quo laborum, necessitatibus tenetur culpa cupiditate esse, quidem modi ab quisquam ducimus, iusto non sit blanditiis autem maiores. Lorem, ipsum dolor sit amet consectetur adipisicing elit. Id vel, minus ratione delectus optio excepturi enim, esse vero quasi nemo quisquam, quas fuga mollitia? Perspiciatis optio quos iusto expedita incidunt.</div>
+
+            </div>
+            <div></div>
+
+            
+
+        </div>
+
+
+    </div>
+    <input type="text" id="clearFormatting" hidden="hidden">
+</body>
+</html>

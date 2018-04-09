@@ -1,0 +1,205 @@
+* {
+    margin: 0px;
+    padding: 0px;
+    outline: none;
+}
+body {
+    font-family: 'Roboto', sans-serif;
+    padding-top: 60px;
+    padding-bottom: 500px;
+    min-width: 660px;
+}
+
+.wrapper {
+    max-width: 1100px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#nav {
+    min-width: 660px;
+    z-index: 2;
+    position: fixed;
+    top: 0px;
+    right: 0px;
+    left: 0px;
+    background-color: rgba(255, 255, 255, 0.96);
+    border-bottom: 0px solid rgba(255, 255, 255, 0);
+    transition: border-bottom 0.3s;
+}
+#nav > div {
+    margin: auto;
+    position: relative;
+    padding-top: 24px;
+    padding-bottom: 24px;
+    height: 20px;
+    max-width: 1080px;
+}
+#nav > div > a {
+    text-decoration: none;
+}
+#nav > div > a > div {
+    font-size: 18px;
+    color: #414146;
+    display: inline;
+    padding: 20px;
+    box-sizing: content-box;
+    transition-duration: 0.3s;
+}
+#nav > div > a:hover > div {
+    color: #6F75FF;
+    text-shadow: 0px 1px 24px rgba(111, 116, 255, 0.4);
+}
+#nav > div > a:first-of-type div {
+    background-image:url(logo.svg);
+    background-position: left;
+    background-position-x: 15px;
+    background-repeat: no-repeat;
+    background-size: 32px;
+    padding-left: 60px;
+    height: 40px;
+}
+#nav > div > a:last-of-type div {
+    position: absolute;
+    top: 4px;
+    right: 0px;
+}
+
+
+
+
+
+
+#overview {
+    display: grid;
+    grid-template-columns: 1fr 400px;
+    grid-gap: 10px;
+    padding: 10px;
+    
+}
+@media only screen and (max-width: 850px) { #overview {
+        grid-template-columns: 1fr;
+}}
+#overview>div {
+    border-radius: 2px;
+    position: relative;
+    background-color: rgb(245, 246, 247);
+}
+
+#photo {
+    background-size: cover;
+    background-position: center;
+    margin: 0px;
+    margin-left: 0px;
+    height: 400px;
+}
+
+#desc {
+    padding: 40px;
+}
+h1 {
+    color: #26262b;
+    font-weight: 400;
+    font-weight: 28px;
+    font-size: 30px;
+}
+p {
+    color: #414146;
+    line-height: 140%;
+    font-weight: 400;
+    margin-top: 20px;
+    text-align: justify;
+    font-size: 16px;
+}
+#authorOutlet a {
+    text-decoration: underline;
+    color: #414146;
+}
+#editButton {
+    z-index: 2;
+    cursor: pointer;
+    border-radius: 2px;
+    background-color: rgb(112, 131, 247);
+    background: url(editicon.svg) left no-repeat, linear-gradient(-30deg, rgb(185, 187, 189), rgb(132, 132, 136));
+    background-size: 22px, 100%;
+    background-position-x: 8px, 0;
+    color: white;
+    font-size: 14px;
+    font-weight: 600;
+    padding: 10px;
+    padding-left: 36px;
+    text-align: center;
+    position: absolute;
+    right: 100px;
+    top: 16px;
+    margin-left: 40px;
+    box-shadow: 0px 0px 0 rgba(112, 191, 255, 0.4);
+    transition-duration: 0.4s;
+}
+#editButton[editing="true"] {
+    background: url(saveicon.svg) left no-repeat, linear-gradient(-30deg, rgb(112, 191, 255), #6F75FF);
+    background-position-x: 9px, 0;
+    padding-left: 40px;
+}
+
+
+
+
+#project {
+    margin-left: auto;
+    margin-right: auto;
+    display: grid;
+    grid-template-columns: 220px 1fr 220px;
+    padding: 30px;
+}
+@media only screen and (max-width: 1050px) { #project {
+    display: grid;
+    grid-template-columns: 220px 1fr 30px;
+}}
+@media only screen and (max-width: 850px) { #project {
+    display: grid;
+    grid-template-columns: 1fr;
+}}
+
+#pageOutlet {
+    position: -webkit-sticky;
+    position: sticky;
+    top: 90px;
+}
+#pages > div {
+    box-sizing: border-box;
+    text-align: left;
+    padding: 20px;
+    padding-left: 24px;
+}
+#pages > div > div {
+    cursor: pointer;
+    color: #414146;
+    font-size: 20px;
+    padding-top: 3px;
+    padding-bottom: 3px;
+    position: relative;
+}
+#pages > div > div::after {
+    content: "";
+    display: block;
+    background-color: rgb(223, 225, 226);
+    width: 3px;
+    height: 100%;
+    position: absolute;
+    left: -16px;
+    top: 0px;
+    transform: scaleX(0);
+    transform-origin: right;
+    transition-duration: 0.2s;
+}
+#pages > div > div:hover::after {
+    transform: scaleX(1);
+}
+#pages > div > div[selected=true] {
+    color: rgb(81, 100, 228);
+}
+#pages > div > div[selected=true]::after {
+    transform: scaleX(1);
+    background-color: rgb(112, 131, 247);
+}
